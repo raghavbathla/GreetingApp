@@ -5,6 +5,7 @@ import com.example.greetingapp.model.Greeting;
 import com.example.greetingapp.model.User;
 import com.example.greetingapp.repositery.Greetingrepositery;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.atomic.AtomicLong;
@@ -13,6 +14,7 @@ import java.util.concurrent.atomic.AtomicLong;
 public class GreetingService implements IgreetingService{
     private static final String template ="Hello %s!";
     private static final AtomicLong counter =new AtomicLong();
+
     @Autowired
     private Greetingrepositery greetingRepository;
     @Override
